@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body{
+        font-family:"Courier",monospace;
+        text-transform: capitalize;
+        text-align: center;
+    }
+    #portfolio {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    #portfolio img {
+      height: 720px;
+      width: 1080x;
+      border-radius: 10px;
+      box-shadow: 0 0 10px gray;
+    }
+
+    #portfolio button {
+      margin-top: 10px;
+      padding: 8px 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+<h2><u>few of my work</u></h2>
+  <div id="portfolio">
+    <img id="projectImg" src="wardrobe (6).png" alt="Project">
+    <br>
+    <button onclick="showNext()">Next</button>
+  </div>
+
+  <script>
+    const images = ["bladerunner2049.png","gamb.png", "ocean1.png","apoclypas2.png"];
+    let currentIndex = 0;
+
+    function showNext() {
+      currentIndex = (currentIndex + 1) % images.length;
+      document.getElementById("projectImg").src = images[currentIndex];
+    }
+  document.addEventListener('contextmenu', event => event.preventDefault());
+
+  </script>
+
+</body>
+</html>
